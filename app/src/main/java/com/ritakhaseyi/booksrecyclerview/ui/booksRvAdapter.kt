@@ -1,9 +1,9 @@
-package com.ritakhaseyi.booksrecyclerview
+package com.ritakhaseyi.booksrecyclerview.ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.ritakhaseyi.booksrecyclerview.databinding.ActivityMainBinding
+import com.ritakhaseyi.booksrecyclerview.model.bookData
 import com.ritakhaseyi.booksrecyclerview.databinding.BookNameListBinding
 import com.squareup.picasso.Picasso
 

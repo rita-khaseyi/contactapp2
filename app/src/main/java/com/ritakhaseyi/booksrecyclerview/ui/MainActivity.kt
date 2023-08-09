@@ -1,11 +1,11 @@
-package com.ritakhaseyi.booksrecyclerview
+package com.ritakhaseyi.booksrecyclerview.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.ritakhaseyi.booksrecyclerview.model.bookData
 import com.ritakhaseyi.booksrecyclerview.databinding.ActivityMainBinding
-import com.ritakhaseyi.booksrecyclerview.databinding.BookNameListBinding
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -27,20 +27,20 @@ class MainActivity : AppCompatActivity() {
 
 
     fun displayBooks(){
-        var book4=bookData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQS48qcUZ2liC2_1RF_Dz41hAu4Z-CO6zcHA&usqp=CAU","purity","linda@gmail.com",24567023)
-        var book5=bookData("https://media.istockphoto.com/id/1396161407/photo/smiling-woman-with-afro-hair-looking-to-the-side.webp?b=1&s=170667a&w=0&k=20&c=-zmqRxsv_s0n42JQrQNO9uOxr91LCvub2WZWrHGI1-4=","desire pursuit","lindseyg@gmail.com",2023)
-        var book6=bookData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDWw8Vdm9JSAzsSu6MANcNR3pE0wZOISapEA&usqp=CAU","desire ","lindsey@gmail.com",20234567)
-        var book7=bookData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMFOHVXnIzegFdSgjj6wkG6Wp2ScgGyneP-Q&usqp=CAU","patricia","patricia@gmail.com",20233456)
-        var book8=bookData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg5lHRbx2Uw-SE-NKkAuXe55bfVJjLSD_rIw&usqp=CAU","kimmy","lindsey@gmail.com",20233456)
-        var book9=bookData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2hq8Ape-Wtz81hck2-erkagy2jvltZeh8ETCxhHXwyIytD0zg05d1aHXxRTVO03FaZzY&usqp=CAU","aliyah","lindsey",2034567623)
-        var book10=bookData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2hq8Ape-Wtz81hck2-erkagy2jvltZeh8ETCxhHXwyIytD0zg05d1aHXxRTVO03FaZzY&usqp=CAU","desire pursuit","lindsey",2023)
-        var book11=bookData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2hq8Ape-Wtz81hck2-erkagy2jvltZeh8ETCxhHXwyIytD0zg05d1aHXxRTVO03FaZzY&usqp=CAU","precious","lindsey",2023)
-        var book12=bookData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsX31ZGkkVvq-tFD-hYds8ClTIu4p4aZiGPyQBhAEclUlYLsAhTnRkO3b9qAx1Sa2NDPU&usqp=CAU","desire pursuit","lindsey",2023)
-        var book13=bookData("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmzDMK4-sGg5UBsIgSHdzrnxcrMGXQlOW697-0DIYr5us9Gx5L2vFfqYM8nRM7IrxmNJU&usqp=CAU","desire pursuit","lindsey",2023)
+        var book4= bookData( 0 ,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQS48qcUZ2liC2_1RF_Dz41hAu4Z-CO6zcHA&usqp=CAU","purity","linda@gmail.com",24567023)
+        var book5= bookData( 0,"https://media.istockphoto.com/id/1396161407/photo/smiling-woman-with-afro-hair-looking-to-the-side.webp?b=1&s=170667a&w=0&k=20&c=-zmqRxsv_s0n42JQrQNO9uOxr91LCvub2WZWrHGI1-4=","desire pursuit","lindseyg@gmail.com",2023)
+        var book6= bookData(0,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDWw8Vdm9JSAzsSu6MANcNR3pE0wZOISapEA&usqp=CAU","desire ","lindsey@gmail.com",20234567)
+        var book7= bookData(0,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMFOHVXnIzegFdSgjj6wkG6Wp2ScgGyneP-Q&usqp=CAU","patricia","patricia@gmail.com",20233456)
+        var book8= bookData(0,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg5lHRbx2Uw-SE-NKkAuXe55bfVJjLSD_rIw&usqp=CAU","kimmy","lindsey@gmail.com",20233456)
+        var book9= bookData(0,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2hq8Ape-Wtz81hck2-erkagy2jvltZeh8ETCxhHXwyIytD0zg05d1aHXxRTVO03FaZzY&usqp=CAU","aliyah","lindsey",2034567623)
+        var book10= bookData(0,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2hq8Ape-Wtz81hck2-erkagy2jvltZeh8ETCxhHXwyIytD0zg05d1aHXxRTVO03FaZzY&usqp=CAU","desire pursuit","lindsey",2023)
+        var book11= bookData(0,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2hq8Ape-Wtz81hck2-erkagy2jvltZeh8ETCxhHXwyIytD0zg05d1aHXxRTVO03FaZzY&usqp=CAU","precious","lindsey",2023)
+        var book12= bookData(0,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsX31ZGkkVvq-tFD-hYds8ClTIu4p4aZiGPyQBhAEclUlYLsAhTnRkO3b9qAx1Sa2NDPU&usqp=CAU","desire pursuit","lindsey",2023)
+        var book13= bookData(0,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmzDMK4-sGg5UBsIgSHdzrnxcrMGXQlOW697-0DIYr5us9Gx5L2vFfqYM8nRM7IrxmNJU&usqp=CAU","desire pursuit","lindsey",2023)
 
         var booklist= listOf<bookData>(book4,book5,book6,book7,book8,book9,book10,book11,book12,book13)
         binding.rvbooks.layoutManager=LinearLayoutManager(this)
-        var bookAdapter=booksRvAdapter(booklist)
+        var bookAdapter= booksRvAdapter(booklist)
         binding.rvbooks.adapter=bookAdapter
 
 

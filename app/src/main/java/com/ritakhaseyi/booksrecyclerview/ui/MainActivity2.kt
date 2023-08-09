@@ -1,4 +1,4 @@
-package com.ritakhaseyi.booksrecyclerview
+package com.ritakhaseyi.booksrecyclerview.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
